@@ -10,6 +10,10 @@ execute as @a unless predicate ride_anything:is_sneaking if predicate ride_anyth
 execute as @a[tag=ra_giveintent] run function ride_anything:intent/give
 execute as @a[tag=!ra_giveintent] run function ride_anything:intent/kill
 
+# ride target
+execute as @a[tag=ra_interact] run function ride_anything:ride_target
+tag @a remove ra_interact
+
 # control vehicle
 team empty ra_aly
 execute as @a unless predicate ride_anything:no_coas if predicate ride_anything:on_controllable run function ride_anything:control_vehicle

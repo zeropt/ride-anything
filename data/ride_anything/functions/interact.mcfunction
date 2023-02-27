@@ -4,5 +4,5 @@
 # revoke advancement
 advancement revoke @s only ride_anything:interact
 
-# ride target
-function ride_anything:ride_target
+# tag player
+tag @s add ra_interact

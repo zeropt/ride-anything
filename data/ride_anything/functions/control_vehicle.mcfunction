@@ -7,7 +7,11 @@ execute on vehicle run team join ra_aly
 
 # set rotation
 execute at @s on vehicle store result entity @s Rotation[0] float 1.0 run data get entity @p Rotation[0]
-execute at @s on vehicle store result entity @s Rotation[1] float 1.0 run data get entity @p Rotation[1]
+execute store result score #ride_anything ra_var0 run data get entity @s Rotation[1] 100.0
+execute if score #ride_anything ra_var0 matches 4500.. run scoreboard players set #ride_anything ra_var0 4500
+execute if score #ride_anything ra_var0 matches ..-4500 run scoreboard players set #ride_anything ra_var0 -4500
+scoreboard players operation @s ra_var0 = #ride_anything ra_var0
+execute at @s on vehicle store result entity @s Rotation[1] float 0.01 run scoreboard players get #ride_anything ra_var0
 
 # get player heading
 function ride_anything:get_heading
