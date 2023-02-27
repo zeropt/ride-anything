@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:player",
+    "minecraft:interaction",
+    "minecraft:marker",
+    "minecraft:block_display",
+    "minecraft:item_display",
+    "minecraft:text_display",
+    "minecraft:boat",
+    "minecraft:chest_boat",
+    "minecraft:minecart",
+    "minecraft:donkey",
+    "minecraft:horse",
+    "minecraft:llama",
+    "minecraft:mule",
+    "minecraft:pig"
+  ]
+}

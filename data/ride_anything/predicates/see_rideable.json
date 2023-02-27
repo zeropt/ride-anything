@@ -1,0 +1,40 @@
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type_specific": {
+        "type": "player",
+        "looking_at": {
+          "distance": {
+            "absolute": {
+              "min": 0,
+              "max": 5
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type_specific": {
+          "type": "player",
+          "looking_at": {
+            "type": "#ride_anything:unrideable",
+            "distance": {
+              "absolute": {
+                "min": 0,
+                "max": 5
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
