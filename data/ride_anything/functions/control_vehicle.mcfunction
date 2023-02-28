@@ -20,10 +20,10 @@ function ride_anything:get_heading
 tag @s remove ra_jump
 execute on vehicle store result score #ride_anything ra_x run data get entity @s Motion[0] 100.0
 execute on vehicle store result score #ride_anything ra_z run data get entity @s Motion[2] 100.0
-execute if score @s ra_x matches 70.. if score #ride_anything ra_x matches 0 run tag @s add ra_jump
-execute if score @s ra_x matches ..-70 if score #ride_anything ra_x matches 0 run tag @s add ra_jump
-execute if score @s ra_z matches 70.. if score #ride_anything ra_z matches 0 run tag @s add ra_jump
-execute if score @s ra_z matches ..-70 if score #ride_anything ra_z matches 0 run tag @s add ra_jump
+execute if score @s ra_x matches 50.. if score #ride_anything ra_x matches 0 run tag @s add ra_jump
+execute if score @s ra_x matches ..-50 if score #ride_anything ra_x matches 0 run tag @s add ra_jump
+execute if score @s ra_z matches 50.. if score #ride_anything ra_z matches 0 run tag @s add ra_jump
+execute if score @s ra_z matches ..-50 if score #ride_anything ra_z matches 0 run tag @s add ra_jump
 execute as @s[tag=ra_jump] on vehicle as @s[nbt={OnGround:1b}] run data modify entity @s Motion[1] set value 0.4
 
 # move vehicle
